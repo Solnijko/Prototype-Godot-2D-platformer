@@ -19,7 +19,6 @@ func _physics_process(delta):
 		get_node("AnimatedSprite2D").play("Jump")
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			print("JUMP!")
 			
 		player = get_node("../../Player/Player")
 		var direction = (player.position - self.position)
