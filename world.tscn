@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://fahiy0p8shd6"]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://world.gd" id="1_qeqks"]
 [ext_resource type="Texture2D" uid="uid://bbal72tsorfjj" path="res://src/PNG/environment/layers/tileset.png" id="2_81r1r"]
-[ext_resource type="PackedScene" uid="uid://bdopmu8w7towb" path="res://Player/garry.tscn" id="2_aajgw"]
+[ext_resource type="PackedScene" uid="uid://bdopmu8w7towb" path="res://Player/Player.tscn" id="2_aajgw"]
 [ext_resource type="Script" path="res://BG.gd" id="2_clgol"]
 [ext_resource type="Texture2D" uid="uid://bg4a3vt4p816u" path="res://src/PNG/environment/layers/back.png" id="4_s86rt"]
 [ext_resource type="PackedScene" uid="uid://bf6s6ujtmlgn6" path="res://Enemies/frog.tscn" id="6_thwb1"]
