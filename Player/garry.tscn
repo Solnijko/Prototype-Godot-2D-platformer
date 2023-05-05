@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://bdopmu8w7towb"]
 
-[ext_resource type="Script" path="res://Player/garry.gd" id="1_8gprf"]
+[ext_resource type="Script" path="res://Player/controls.gd" id="1_g36cc"]
 [ext_resource type="Texture2D" uid="uid://pb5171i3g3os" path="res://src/PNG/spritesheets/player-hurt.png" id="2_gealj"]
 [ext_resource type="Texture2D" uid="uid://ptbukxmmwniq" path="res://src/PNG/sprites/player/idle/player-idle-1.png" id="3_fgthu"]
 [ext_resource type="Texture2D" uid="uid://x3s4lxjgoeiu" path="res://src/PNG/sprites/player/idle/player-idle-2.png" id="4_d0rxa"]
@@ -233,7 +233,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_8gprf")
+script = ExtResource("1_g36cc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(437, 212)

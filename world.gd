@@ -2,8 +2,9 @@ extends Node2D
 
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().change_scene_to_file("res://main.tscn") 
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			get_tree().change_scene_to_file("res://main.tscn") 
 
 
 

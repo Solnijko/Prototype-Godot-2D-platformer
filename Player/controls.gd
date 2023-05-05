@@ -1,5 +1,6 @@
 extends CharacterBody2D
-
+const Player = preload("res://Player/garry.gd") # Relative path
+@onready var player = Player.new()
 
 const SPEED = 270.0
 const JUMP_VELOCITY = -400.0
