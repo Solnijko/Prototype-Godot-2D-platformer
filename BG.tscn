@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://bajv1flhd3xny"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_6yrsj"]
+[ext_resource type="Texture2D" uid="uid://bg4a3vt4p816u" path="res://src/PNG/environment/layers/back.png" id="2_es1d1"]
+[ext_resource type="Texture2D" uid="uid://c143xalur6sfo" path="res://src/PNG/environment/props/house.png" id="3_00jt6"]
+[ext_resource type="Texture2D" uid="uid://dpe8q5iu1u6ph" path="res://src/PNG/environment/layers/middle.png" id="4_2nbbm"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_6yrsj")
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 1)
+
+[node name="Back" type="Sprite2D" parent="Sky"]
+position = Vector2(576, 324)
+scale = Vector2(3, 2.7)
+texture = ExtResource("2_es1d1")
+
+[node name="Houses" type="ParallaxLayer" parent="."]
+position = Vector2(-56, 56)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1152, 1)
+
+[node name="House" type="Sprite2D" parent="Houses"]
+position = Vector2(208, 328)
+scale = Vector2(2.06322, 1.68519)
+texture = ExtResource("3_00jt6")
+
+[node name="House2" type="Sprite2D" parent="Houses"]
+position = Vector2(640, 312)
+scale = Vector2(2.06322, 1.68519)
+texture = ExtResource("3_00jt6")
+
+[node name="House4" type="Sprite2D" parent="Houses"]
+position = Vector2(1064, 336)
+scale = Vector2(2.06322, 1.68519)
+texture = ExtResource("3_00jt6")
+
+[node name="Trees" type="ParallaxLayer" parent="."]
+position = Vector2(0, 72)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Middle" type="Sprite2D" parent="Trees"]
+position = Vector2(88, 408)
+texture = ExtResource("4_2nbbm")
+
+[node name="Middle2" type="Sprite2D" parent="Trees"]
+position = Vector2(264, 408)
+texture = ExtResource("4_2nbbm")
+
+[node name="Middle3" type="Sprite2D" parent="Trees"]
+position = Vector2(440, 408)
+texture = ExtResource("4_2nbbm")
+
+[node name="Middle4" type="Sprite2D" parent="Trees"]
+position = Vector2(616, 408)
+texture = ExtResource("4_2nbbm")
+
+[node name="Middle5" type="Sprite2D" parent="Trees"]
+position = Vector2(792, 408)
+texture = ExtResource("4_2nbbm")
+
+[node name="Middle6" type="Sprite2D" parent="Trees"]
+position = Vector2(968, 408)
+texture = ExtResource("4_2nbbm")
+
+[node name="Middle7" type="Sprite2D" parent="Trees"]
+position = Vector2(1144, 408)
+texture = ExtResource("4_2nbbm")
