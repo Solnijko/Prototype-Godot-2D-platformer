@@ -130,7 +130,7 @@ animations = [{
 size = Vector2(19, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t0d8o"]
-radius = 261.002
+radius = 189.003
 
 [sub_resource type="Animation" id="Animation_soff1"]
 resource_name = "Fall"

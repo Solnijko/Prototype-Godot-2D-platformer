@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7bpre20tco1w"]
+[gd_scene load_steps=4 format=3 uid="uid://b7bpre20tco1w"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_2jffi"]
 [ext_resource type="PackedScene" uid="uid://bajv1flhd3xny" path="res://BG.tscn" id="2_eex68"]
+[ext_resource type="AudioStream" uid="uid://uc0wm7ewfvq8" path="res://src/Sound/Music/main_menu.wav" id="3_raf5m"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_2jffi")
@@ -32,6 +33,12 @@ offset_right = 835.0
 offset_bottom = 354.0
 grow_horizontal = 2
 text = "PLAY"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_raf5m")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

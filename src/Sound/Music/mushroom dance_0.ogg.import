@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://spbqcitx3pgl"
+path="res://.godot/imported/mushroom dance_0.ogg-fdca225ada1dc344ec05fd9cb2e67829.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/Sound/Music/mushroom dance_0.ogg"
+dest_files=["res://.godot/imported/mushroom dance_0.ogg-fdca225ada1dc344ec05fd9cb2e67829.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
