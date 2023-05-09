@@ -1,14 +1,10 @@
-[gd_scene load_steps=38 format=3 uid="uid://bdopmu8w7towb"]
+[gd_scene load_steps=37 format=3 uid="uid://bdopmu8w7towb"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_srbxr"]
-[ext_resource type="Texture2D" uid="uid://g3fxuo85xwfr" path="res://src/PNG/sprites/player/dash/player-dash-1.png" id="2_j4a1q"]
 [ext_resource type="Texture2D" uid="uid://pb5171i3g3os" path="res://src/PNG/spritesheets/player-hurt.png" id="2_lmbxc"]
-[ext_resource type="Texture2D" uid="uid://cqiawc1to0a2p" path="res://src/PNG/sprites/player/dash/player-dash-2.png" id="3_6w1up"]
 [ext_resource type="Texture2D" uid="uid://ptbukxmmwniq" path="res://src/PNG/sprites/player/idle/player-idle-1.png" id="3_smf6j"]
 [ext_resource type="Texture2D" uid="uid://x3s4lxjgoeiu" path="res://src/PNG/sprites/player/idle/player-idle-2.png" id="4_5hson"]
-[ext_resource type="Texture2D" uid="uid://d337gfgyiwr61" path="res://src/PNG/sprites/player/dash/player-dash-3.png" id="4_hbjkt"]
 [ext_resource type="Texture2D" uid="uid://bshn8ci2gqa4h" path="res://src/PNG/sprites/player/idle/player-idle-3.png" id="5_08xo8"]
-[ext_resource type="Texture2D" uid="uid://deo24vt5o6ty6" path="res://src/PNG/sprites/player/dash/player-dash-4.png" id="5_sit8t"]
 [ext_resource type="Texture2D" uid="uid://bdvsa6jfw7rlm" path="res://src/PNG/sprites/player/idle/player-idle-4.png" id="6_bweqt"]
 [ext_resource type="Texture2D" uid="uid://csgckb25l2d8d" path="res://src/PNG/sprites/player/jump/player-jump-1.png" id="7_q0a1v"]
 [ext_resource type="Texture2D" uid="uid://bgdgyrvtdjpke" path="res://src/PNG/sprites/player/jump/player-jump-2.png" id="8_2slbv"]
@@ -25,6 +21,18 @@
 [ext_resource type="Texture2D" uid="uid://b8jvl8yl70kpj" path="res://src/PNG/sprites/player/stomp/player-stomp-5.png" id="19_djiki"]
 [ext_resource type="PackedScene" uid="uid://bjfg31sqgy2d6" path="res://dash.tscn" id="24_gq5wn"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51c7n"]
+load_path = "res://.godot/imported/player-dash-1.png-a620b300868f60c58c277f31cb5e86ad.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lpf3l"]
+load_path = "res://.godot/imported/player-dash-2.png-34dc8f5cf6d858817df89229ed1eb0d7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f62j6"]
+load_path = "res://.godot/imported/player-dash-3.png-ce825a02387e4f1ee1b02b56e858008e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lua2q"]
+load_path = "res://.godot/imported/player-dash-4.png-896a82b9f78a337b24c212fd3df3c2a9.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_13lli"]
 atlas = ExtResource("2_lmbxc")
 region = Rect2(0, 0, 33, 32)
@@ -37,16 +45,16 @@ region = Rect2(33, 0, 33, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_j4a1q")
+"texture": SubResource("CompressedTexture2D_51c7n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_6w1up")
+"texture": SubResource("CompressedTexture2D_lpf3l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hbjkt")
+"texture": SubResource("CompressedTexture2D_f62j6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_sit8t")
+"texture": SubResource("CompressedTexture2D_lua2q")
 }],
 "loop": true,
 "name": &"Dash",
@@ -138,34 +146,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cgklr"]
 radius = 6.0
 height = 22.0
-
-[sub_resource type="Animation" id="Animation_i06x8"]
-resource_name = "Dash"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Dash"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
 
 [sub_resource type="Animation" id="Animation_028cw"]
 resource_name = "Death"
@@ -339,7 +319,6 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s4koy"]
 _data = {
-"Dash": SubResource("Animation_i06x8"),
 "Death": SubResource("Animation_028cw"),
 "Fall": SubResource("Animation_lp75j"),
 "Idle": SubResource("Animation_x6ykw"),
