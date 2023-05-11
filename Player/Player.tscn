@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bdopmu8w7towb"]
+[gd_scene load_steps=28 format=3 uid="uid://bdopmu8w7towb"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_srbxr"]
 [ext_resource type="Texture2D" uid="uid://pb5171i3g3os" path="res://src/PNG/spritesheets/player-hurt.png" id="2_lmbxc"]
@@ -14,24 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://crs22c5ihw5tq" path="res://src/PNG/sprites/player/run/player-run-4.png" id="12_jaalg"]
 [ext_resource type="Texture2D" uid="uid://b4p54tleldmcq" path="res://src/PNG/sprites/player/run/player-run-5.png" id="13_ryapy"]
 [ext_resource type="Texture2D" uid="uid://fdodk3w52fkf" path="res://src/PNG/sprites/player/run/player-run-6.png" id="14_krraf"]
-[ext_resource type="Texture2D" uid="uid://b54vni7fk0tbs" path="res://src/PNG/sprites/player/stomp/player-stomp-1.png" id="15_ritxl"]
-[ext_resource type="Texture2D" uid="uid://d0dckpu5sk7a" path="res://src/PNG/sprites/player/stomp/player-stomp-2.png" id="16_y6bjq"]
-[ext_resource type="Texture2D" uid="uid://dnlhxepl6fuqa" path="res://src/PNG/sprites/player/stomp/player-stomp-3.png" id="17_3j3sv"]
-[ext_resource type="Texture2D" uid="uid://dnpyb0awctg7i" path="res://src/PNG/sprites/player/stomp/player-stomp-4.png" id="18_vcu5s"]
-[ext_resource type="Texture2D" uid="uid://b8jvl8yl70kpj" path="res://src/PNG/sprites/player/stomp/player-stomp-5.png" id="19_djiki"]
 [ext_resource type="PackedScene" uid="uid://bjfg31sqgy2d6" path="res://dash.tscn" id="24_gq5wn"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51c7n"]
-load_path = "res://.godot/imported/player-dash-1.png-a620b300868f60c58c277f31cb5e86ad.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lpf3l"]
-load_path = "res://.godot/imported/player-dash-2.png-34dc8f5cf6d858817df89229ed1eb0d7.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f62j6"]
-load_path = "res://.godot/imported/player-dash-3.png-ce825a02387e4f1ee1b02b56e858008e.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lua2q"]
-load_path = "res://.godot/imported/player-dash-4.png-896a82b9f78a337b24c212fd3df3c2a9.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_13lli"]
 atlas = ExtResource("2_lmbxc")
@@ -43,23 +26,6 @@ region = Rect2(33, 0, 33, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lm15j"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_51c7n")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_lpf3l")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_f62j6")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_lua2q")
-}],
-"loop": true,
-"name": &"Dash",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_13lli")
@@ -120,26 +86,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_ritxl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_y6bjq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_3j3sv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_vcu5s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_djiki")
-}],
-"loop": true,
-"name": &"Stomp",
 "speed": 5.0
 }]
 

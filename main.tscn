@@ -36,6 +36,7 @@ text = "PLAY"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_raf5m")
+volume_db = -14.062
 autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
