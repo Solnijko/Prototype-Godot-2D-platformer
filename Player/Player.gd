@@ -3,7 +3,7 @@ extends CharacterBody2D
 #Physical constants
 const SPEED = 270.0
 const JUMP_VELOCITY = -400.0
-const DASH_SPEED = 1100
+const DASH_SPEED = 910
 const DASH_LENGTH = .1
 const FALL_MODIFIER = 50
 
@@ -63,7 +63,6 @@ func _physics_process(delta):
 	if direction:
 		if Input.is_action_just_pressed("dash"):
 			dash.start_dash(DASH_LENGTH)
-			animation.play("Dash")
 		velocity.x = direction * DASH_SPEED if dash.is_dashing() else direction * SPEED
 		if velocity.y == 0:
 			animation.play("Run")

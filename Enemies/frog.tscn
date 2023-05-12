@@ -1,33 +1,14 @@
-[gd_scene load_steps=25 format=3 uid="uid://bf6s6ujtmlgn6"]
+[gd_scene load_steps=27 format=3 uid="uid://bf6s6ujtmlgn6"]
 
 [ext_resource type="Texture2D" uid="uid://xv6rx8abyrjb" path="res://src/PNG/spritesheets/frog-idle.png" id="1_31tt1"]
 [ext_resource type="Script" path="res://Enemies/frog.gd" id="1_65aga"]
-[ext_resource type="Texture2D" uid="uid://cxcjs37gq8gxp" path="res://src/PNG/spritesheets/enemy-deadth.png" id="1_l5akq"]
+[ext_resource type="Texture2D" uid="uid://bjtcvdds8ada7" path="res://src/PNG/sprites/enemy-death/enemy-death-1.png" id="2_bjkbb"]
 [ext_resource type="Texture2D" uid="uid://bh23julkgllvw" path="res://src/PNG/spritesheets/frog-jump.png" id="2_f7j5d"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k0p70"]
-atlas = ExtResource("1_l5akq")
-region = Rect2(0, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ardxo"]
-atlas = ExtResource("1_l5akq")
-region = Rect2(40, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b1s17"]
-atlas = ExtResource("1_l5akq")
-region = Rect2(80, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ekgf"]
-atlas = ExtResource("1_l5akq")
-region = Rect2(120, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlvfq"]
-atlas = ExtResource("1_l5akq")
-region = Rect2(160, 0, 40, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2gsv"]
-atlas = ExtResource("1_l5akq")
-region = Rect2(200, 0, 40, 41)
+[ext_resource type="Texture2D" uid="uid://dd6fj1mjo0n7y" path="res://src/PNG/sprites/enemy-death/enemy-death-2.png" id="3_1qkrj"]
+[ext_resource type="Texture2D" uid="uid://b360y46d7m56o" path="res://src/PNG/sprites/enemy-death/enemy-death-3.png" id="4_yo8mg"]
+[ext_resource type="Texture2D" uid="uid://cyl78dj3mdggt" path="res://src/PNG/sprites/enemy-death/enemy-death-4.png" id="5_6ysxk"]
+[ext_resource type="Texture2D" uid="uid://tqqerw4u3ho0" path="res://src/PNG/sprites/enemy-death/enemy-death-5.png" id="6_6gs18"]
+[ext_resource type="Texture2D" uid="uid://b0cvt1w1f7gl8" path="res://src/PNG/sprites/enemy-death/enemy-death-6.png" id="7_u05l7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnwdr"]
 atlas = ExtResource("1_31tt1")
@@ -61,22 +42,22 @@ region = Rect2(70, 0, 35, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k0p70")
+"texture": ExtResource("2_bjkbb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ardxo")
+"texture": ExtResource("3_1qkrj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b1s17")
+"texture": ExtResource("4_yo8mg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ekgf")
+"texture": ExtResource("5_6ysxk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jlvfq")
+"texture": ExtResource("6_6gs18")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j2gsv")
+"texture": ExtResource("7_u05l7")
 }],
 "loop": true,
 "name": &"Death",
@@ -132,6 +113,34 @@ size = Vector2(19, 14)
 [sub_resource type="CircleShape2D" id="CircleShape2D_t0d8o"]
 radius = 189.003
 
+[sub_resource type="Animation" id="Animation_7i31n"]
+resource_name = "Death"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Death"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
 [sub_resource type="Animation" id="Animation_soff1"]
 resource_name = "Fall"
 tracks/0/type = "value"
@@ -157,6 +166,35 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_2b84l"]
+resource_name = "Idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_ohvwe"]
@@ -203,13 +241,22 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_risyw"]
 _data = {
+"Death": SubResource("Animation_7i31n"),
 "Fall": SubResource("Animation_soff1"),
+"Idle": SubResource("Animation_2b84l"),
 "Jump": SubResource("Animation_ohvwe"),
 "RESET": SubResource("Animation_yxmdq")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5loo7"]
+size = Vector2(19, 3.5)
+
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_65aga")
+
+[node name="death_animation_timer" type="Timer" parent="."]
+wait_time = 0.65
+one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -11)
@@ -232,5 +279,15 @@ libraries = {
 "": SubResource("AnimationLibrary_risyw")
 }
 
+[node name="Enemy Death" type="Area2D" parent="."]
+position = Vector2(-1, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Death"]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_5loo7")
+debug_color = Color(0.992157, 0, 0, 0.419608)
+
+[connection signal="timeout" from="death_animation_timer" to="." method="_on_death_animation_timer_timeout"]
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="Enemy Death" to="." method="_on_enemy_death_body_entered"]
