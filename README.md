@@ -1,2 +1,2 @@
 # Prototype-Godot-2D-platformer
-My godot project. Made for testing an engine
+2d Godot project. Nothing serious, just testing the engine 
